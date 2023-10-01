@@ -12,7 +12,7 @@ int main (void)
 
 	if (pid == -1)
 	{
-		perror("unsessful");
+		perror("unsuccessful");
 		return (1);
 	}
 	if (pid == 0)
