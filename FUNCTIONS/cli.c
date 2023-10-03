@@ -28,18 +28,24 @@ int main(void)
 	argv = malloc(sizeof(char *) * argc);
 	while (token)
 	{
-		argv[i] = token;
+		argv[i] = (token);
 		token = strtok(NULL, delim);
 		i++;
 	}
 	
-	argv[i] = NULL;
+	argv[i] = '\0';
 	i = 0;
 
 	while (argv[i])
 	{
 		printf("%s\n", argv[i++]);
 	}
+
+	/* while (i < argc)
+	{
+		free(argv[i]);
+		i++;
+	} */
 
 	free(buffer);
 	free(buffer_cpy);
